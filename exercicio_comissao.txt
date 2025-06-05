@@ -1,0 +1,6 @@
+Comissão para os vendedores que alcançarem a meta R$ 5.000,00/mês.
+
+1. Analisar as vendas dos respectivos vendedores no mês anterior.
+2. Listar qual(is) os vendedores tiveram o total de vendas maior ou igual à R$ 5.000,00 no mês anterior.
+3. Gratificar os vendedores listados acima com 1% de comissão sobre o total de vendas.
+4. Somar a gratificação de cada vendedor ao salário mensal.
