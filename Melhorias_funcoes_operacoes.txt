@@ -1,0 +1,138 @@
+Seu pseudocódigo está bastante próximo de um algoritmo funcional e bem estruturado. Aqui vão algumas observações e sugestões para torná-lo mais robusto e claro:
+
+✅ Pontos Positivos:
+Uso correto de funções para cada operação matemática.
+
+Estrutura lógica bem organizada com condicionais aninhadas.
+
+Entrada de dados interativa com o usuário.
+
+🔧 Melhorias sugeridas:
+Evitar divisão por zero:
+Adicione uma verificação antes de realizar a divisão.
+
+Tratar operações inválidas:
+Caso o usuário insira um caractere que não seja +, -, * ou /.
+
+Melhoria de clareza visual (opcional):
+Usar caso (se sua linguagem pseudocódigo permitir) ao invés de muitos se...senao.
+
+💡 Versão Melhorada do Pseudocódigo:
+pseudocodigo
+Copiar
+Editar
+funcao adicao(numero1, numero2 : real) : real
+    retorne(numero1 + numero2)
+fimfuncao
+
+funcao subtracao(numero1, numero2 : real) : real
+    retorne(numero1 - numero2)
+fimfuncao
+
+funcao multiplicacao(numero1, numero2 : real) : real
+    retorne(numero1 * numero2)
+fimfuncao
+
+funcao divisao(numero1, numero2 : real) : real
+    se numero2 = 0 entao
+        escreval("Erro: Divisão por zero.")
+        retorne 0
+    senao
+        retorne(numero1 / numero2)
+    fimse
+fimfuncao
+
+Var
+    numero1, numero2 : real
+    operacao : caractere
+
+Inicio
+    escreval("Digite o primeiro número: ")
+    leia(numero1)
+
+    escreval("Informe a operação (+, -, *, /): ")
+    leia(operacao)
+
+    escreval("Digite o segundo número: ")
+    leia(numero2)
+
+    se operacao = "+" entao
+        escreval("Resultado: ", adicao(numero1, numero2))
+    senao se operacao = "-" entao
+        escreval("Resultado: ", subtracao(numero1, numero2))
+    senao se operacao = "*" entao
+        escreval("Resultado: ", multiplicacao(numero1, numero2))
+    senao se operacao = "/" entao
+        escreval("Resultado: ", divisao(numero1, numero2))
+    senao
+        escreval("Operação inválida.")
+    fimse
+
+Fimalgoritmo
+Se você quiser, posso converter esse pseudocódigo para uma linguagem de programação real como Python, Pascal, ou C. É só dizer!
+
+
+
+Você disse:
+Dá para fazer uma função única chamada operação
+
+O ChatGPT disse:
+Sim, dá perfeitamente para unificar as quatro operações em uma única função chamada operacao. Essa função pode receber três parâmetros:
+
+numero1 (real)
+
+numero2 (real)
+
+operador (caractere: +, -, *, /)
+
+Dentro da função, você usa uma estrutura condicional (se...senao ou caso) para decidir qual operação realizar.
+
+✅ Versão com função única operacao:
+pseudocodigo
+Copiar
+Editar
+funcao operacao(numero1, numero2 : real; operador : caractere) : real
+    se operador = "+" entao
+        retorne(numero1 + numero2)
+    senao se operador = "-" entao
+        retorne(numero1 - numero2)
+    senao se operador = "*" entao
+        retorne(numero1 * numero2)
+    senao se operador = "/" entao
+        se numero2 = 0 entao
+            escreval("Erro: Divisão por zero.")
+            retorne 0
+        senao
+            retorne(numero1 / numero2)
+        fimse
+    senao
+        escreval("Operação inválida.")
+        retorne 0
+    fimse
+fimfuncao
+
+Var
+    numero1, numero2 : real
+    operador : caractere
+
+Inicio
+    escreval("Digite o primeiro número: ")
+    leia(numero1)
+
+    escreval("Informe a operação (+, -, *, /): ")
+    leia(operador)
+
+    escreval("Digite o segundo número: ")
+    leia(numero2)
+
+    escreval("Resultado: ", operacao(numero1, numero2, operador))
+
+Fimalgoritmo
+📝 Vantagens dessa abordagem:
+Menos código repetido.
+
+Mais fácil de manter: se quiser mudar algo em como a operação é feita, altera só um lugar.
+
+Organização: a lógica fica centralizada.
+
+Se você quiser uma versão usando caso ao invés de se...senao, também posso adaptar.

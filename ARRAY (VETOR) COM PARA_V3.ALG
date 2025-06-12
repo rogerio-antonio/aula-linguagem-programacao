@@ -11,12 +11,12 @@ Var
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
    para i de 1 ate 10 faca
-        escreval("Informe o nome da cidade: ")
+        escreval("Informe a", i, "º cidade: ")
         leia(cidades[i])
    fimpara
 
     para i de 1 ate 10 faca
         //escreval("Informe sua cidade: ")
-        escreval("Sua cidade é: ",cidades[i])
+        escreval("A", i,"ª cidade é: ",cidades[i])
    fimpara
 fimalgoritmo
